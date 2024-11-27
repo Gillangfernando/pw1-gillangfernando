@@ -1,0 +1,61 @@
+/* General */
+body {
+    background-color: #f8f9fa; /* Light background */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Login Card */
+  .login-card {
+    width: 800px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .image-section {
+    background: url('https://via.placeholder.com/400x500') no-repeat center center/cover;
+    height: 100%;
+  }
+  
+  /* Form Section */
+  h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  form label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  form input {
+    border-radius: 5px;
+  }
+  
+  .btn-warning {
+    background-color: #d8a24b;
+    border-color: #d8a24b;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .btn-warning:hover {
+    background-color: #c98c2c;
+    border-color: #c98c2c;
+  }
+  
+  a {
+    color: #d8a24b;
+  }
+  
+  a:hover {
+    color: #c98c2c;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .image-section {
+      display: none;
+    }
+  }
+  
