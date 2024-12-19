@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Manajemen Karyawan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="d-flex">
+        <nav class="sidebar text-white">
+            <div class="sidebar-header p-2">
+                <img class="logoUnpam" src="./images/logounpam.jpeg" />
+                <a href="#"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></a>
+            </div>
+            <div class="sidebarAcc p-2 row">
+                <div class="profilePic col-3">
+                    <img src="./images/noneprofile.jpeg" height="40" />
+                </div>
+                <div class="descProfile col">
+                    <p style="color: black;"> GILLANG FERNANDO
+                        <br>Administrator</br>
+                    </p>
+                </div>
+            </div>
+
+            <ul class="nav flex-column p-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <img src="./images/house-door-fill.svg">
+                    Dashboard</a>
+                </li>
+                <hr class="border border-primary border-3;">
+
+                <p style="color: black;"><strong>MENU KARYAWAN</strong></p>
+                <li class="nav-item">
+                    <a class="nav-link" href="karyawan.html">
+                        <img src="./images/people-fill.svg">
+                        Karyawan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jabatan.html">
+                        <img src="./images/person-fill-check.svg">
+                         Jabatan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="divisi.html">
+                        <img src="./images/person-fill-add.svg">
+                         Divisi</a>
+                </li>
+                <hr>
+
+                <p style="color: black;">MENU ABSENSI</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="absensi.html">
+                        <img src="./images/calendar2-check.svg">
+                         Absensi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="izin.html">
+                        <img src="./images/calendar-plus.svg">
+                         Izin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lembur.html">
+                        <img src="./images/calendar-plus.svg">
+                         Lembur</a>
+                </li>
+                <hr>
+
+                <p style="color: black;">MENU PENGGAJIAN</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./images/cash.svg">
+                         Slip Gaji</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./images/cash.svg">
+                         Cetak Slip Gaji</a>
+                </li>
+                <hr>
+
+                <p style="color: black;">MENU LAPORAN</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./images/file-earmark-fill.svg">
+                         Cetak Laporan</a>
+                </li>
+                <hr>
+
+                <p style="color: black;">MENU ADMIN</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./images/person-fill-gear.svg">
+                         Pengguna</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                    <button type="logout" class="btn btn-primary">Logout</button>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="content flex-grow-1 nav flex-column p-1">
+            <div class="container-fluid p-4" style="background-color: #0256b2;">
+                <h3 class="mb-5" style="color: white;">Dashboard</h3>
+            </div>
+            <br>
+
+            <div class="row col-sm-12">
+                <div class="row col-sm-10">
+                    <h3><strong>Daftar Lembur Karyawan</strong></h3>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addKaryawan">
+                        Ubah Status
+                    </button>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-9">
+                   <p  class="col-sm-9 col-form-label col-form-label-md">Show
+                    <select>
+                        <option value="1">10</option>
+                        <option value="2">25</option>
+                        <option value="3">50</option>
+                    </select>
+                entries</p>
+            </div>
+            <div class="col-sm-3">
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Search</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword">
+                  </div>
+              </div>
+          </div>
+          <br>
+
+          <div class="mb-3">
+            <table class="table table-striped table-bordered border-dark text-center">
+                <thead class="table table-dark">
+                    <tr>
+                        <th  scope="col">No</th>
+                        <th  scope="col">Nama Karyawan</th>
+                        <th  scope="col">Tanggal</th>
+                        <th  scope="col">Jam Lembur Mulai | Berakhir</th>
+                        <th  scope="col">Keperluan Lembur</th>
+                        <th  scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="align-middle">
+                        <th  scope="row">1</th>
+                        <td>Yovan Fikri</td>
+                        <td>2023-05-10</td>
+                        <td>10:35:00 | 15:35:00</td>
+                        <td>213</td>
+                        <td>Menunuggu Konfirmasi</td>
+                    </tr>
+                    <tr class="align-middle">
+                        <th  scope="row">2</th>
+                        <td>Yovan Fikri</td>
+                        <td>2023-05-09</td>
+                        <td>11:05:00 | 04:05:00</td>
+                        <td>G</td>
+                        <td>Disetujui</td>
+                    </tr>
+                    <tr class="align-middle">
+                        <th  scope="row">3</th>
+                        <td>Yovan Fikri</td>
+                        <td>2023-05-04</td>
+                        <td>17:00:00 | 17:00:00</td>
+                        <td>Lembur</td>
+                        <td>Disetujui</td>
+                    </tr>
+                    <tr class="align-middle">
+                        <th  scope="row">4</th>
+                        <td>Yovan Fikri</td>
+                        <td>2023-005-03</td>
+                        <td>17:00:00 | 21:30:00</td>
+                        <td>Printer</td>
+                        <td>Disetujui</td>
+                    </tr>
+                    <tr class="align-middle">
+                        <th  scope="row">5</th>
+                        <td>Yovan Fikri</td>
+                        <td>2023-04-30</td>
+                        <td>01:346:00 | 10:46:00</td>
+                        <td>213</td>
+                        <td>Disetujui</td>
+                    </tr>
+              </tbody>
+          </table>
+      </div>
+
+
+
+      <div class="row justify-content-end">
+        <p  class="col-sm-9">Showing 1 to 5 of entries</p>
+        <div class="col-sm-3 ">
+            <div class="mb-3 row">
+             <ul class="pagination justify-content-end">
+                <li class="page-item disabled">
+                  <a class="page-link">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- Modal Add Karyawan
+<div class="modal fade" id="addKaryawan" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="ModaladdKaryawan"><strong>Data Karyawan</strong></h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+            <div class="mb-3">
+                <label  class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="nmkaryawan">
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Jenis Kelamain</label>
+                <select class="form-select">
+                    <option selected aria-label="Disabled select example" disabled>---</option>
+                    <option value="1">Laki-Laki</option>
+                    <option value="2">Perempuan</option>
+                    <option value="3">Robot</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Email</label>
+                <input type="text" class="form-control" id="emkaryawan">
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">No.HP</label>
+                <input type="number" class="form-control" id="hpkaryawan">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Alamat</label>
+              <textarea class="form-control" id="alkaryawan" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Password</label>
+            <input type="password" class="form-control" aria-describedby="passwordHelpInline" id="nmkaryawan">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Jabatan</label>
+            <select class="form-select">
+                <option selected aria-label="Disabled select example" disabled>---</option>
+                <option value="1">Direktur</option>
+                <option value="2">Manager</option>
+                <option value="3">Supervisor</option>
+                <option value="4">Staff</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Divisi</label>
+            <select class="form-select">
+                <option selected aria-label="Disabled select example" disabled>---</option>
+                <option value="1">Keunangan</option>
+                <option value="2">Pemasaran</option>
+                <option value="3">HR</option>
+                <option value="4">IT</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Reset</button>
+        <button type="button" class="btn btn-primary">Simpan</button>
+    </div>-->
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Manajemen Karyawan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="d-flex">
+        <nav class="sidebar text-white">
+            <div class="sidebar-header p-2">
+                <img class="logoUnpam" src="./images/logounpam.jpeg" />
+                <a href="#"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></a>
+            </div>
+            <div class="sidebarAcc p-2 row">
+                <div class="profilePic col-3">
+                    <img src="./images/person-circle.svg" height="50" />
+                </div>
+                <div class="descProfile col">
+                    <p style="color: black;"> GILLANG FERNANDO
+                        <br>Administrator</br>
+                    </p>
+                </div>
+            </div>
+
+            <ul class="nav flex-column p-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <img src="./images/house-door-fill.svg">
+                    Dashboard</a>
+                </li>
+                <hr class="border border-primary border-3;">
+
+                <p style="color: black;"><strong>MENU KARYAWAN</strong></p>
+                <li class="nav-item">
+                    <a class="nav-link" href="karyawan.html">
+                        <img src="./images/people-fill.svg">
+                        Karyawan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jabatan.html">
+                        <img src="./images/person-fill-check.svg">
+                         Jabatan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="divisi.html">
+                        <img src="./images/person-fill-add.svg">
+                         Divisi</a>
+                </li>
+                <hr>
+
+                <p style="color: black;">MENU ABSENSI</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="absensi.html">
+                        <img src="./images/calendar2-check.svg">
+                         Absensi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="izin.html">
+                        <img src="./images/calendar-plus.svg">
+                         Izin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lembur.html">
+                        <img src="./images/calendar-plus.svg">
+                         Lembur</a>
+                </li>
+                <hr>
+
+                <p style="color: black;">MENU PENGGAJIAN</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./images/cash.svg">
+                         Slip Gaji</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./images/cash.svg">
+                         Cetak Slip Gaji</a>
+                </li>
+                <hr>
+
+                <p style="color: black;">MENU LAPORAN</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./images/file-earmark-fill.svg">
+                         Cetak Laporan</a>
+                </li>
+                <hr>
+
+                <p style="color: black;">MENU ADMIN</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./images/person-fill-gear.svg">
+                         Pengguna</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                    <button type="logout" class="btn btn-primary">Logout</button>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="content flex-grow-1">
+            <div class="content flex-grow-1 nav flex-column p-1">
+                <div class="container-fluid p-4" style="background-color: #0256b2;">
+                    <h1 class="mb-5" style="color: white;">Sistem Informasi Manajamen Karyawan</h1>
+                    <h3 style="color: white;"> Admin Dashboard </h3>
+                </div>
+
+                <!-- Dashboard Cards -->
+                <div class="row mt-4">
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5>Data Pegawai</h5>
+                                <p>13</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5>Absensi Hari Ini</h5>
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5>Izin Menunggu Konfirmasi</h5>
+                                <p>2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5>Lembur Menunggu Konfirmasi</h5>
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
